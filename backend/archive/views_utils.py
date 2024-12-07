@@ -1,5 +1,5 @@
 from random import choice
-from app.settings import STATIC_URL
+from app.settings import STATIC_ROOT
 
 # ROOT = os.path.abspath(os.path.dirname(__file__))
 # ASSETS = os.path.join(ROOT, 'assets')
@@ -7,8 +7,8 @@ from app.settings import STATIC_URL
 ADJECTIVES_FILENAMES = ['simple-adj']
 #NOUNS_FILENAMES = ['3ln', '4ln', 'mm34']
 NOUNS_FILENAMES = ['wiki-animals-34']
-ADJECTIVES_FILES = map(lambda i: f"{STATIC_URL}arc/assets/{i}", ADJECTIVES_FILENAMES)
-NOUNS_FILES = map(lambda i: f"{STATIC_URL}arc/assets/{i}", NOUNS_FILENAMES)
+ADJECTIVES_FILES = map(lambda i: f"{STATIC_ROOT}/arc/assets/{i}", ADJECTIVES_FILENAMES)
+NOUNS_FILES = map(lambda i: f"{STATIC_ROOT}/arc/assets/{i}", NOUNS_FILENAMES)
 
 adjectives = []
 nouns = []

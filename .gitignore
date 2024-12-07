@@ -8,3 +8,5 @@ backend/lnf/__pycache__
 backend/lnf/migrations
 backend/listings/__pycache__
 backend/listings/migrations
+backend/static/*
+backend/static/arc/*
