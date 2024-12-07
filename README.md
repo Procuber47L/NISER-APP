@@ -35,15 +35,33 @@ This is a basic utility app designed for students at the National Institute of S
 
 4. **Install Dependencies**
    Ensure you are in the `backend` directory and then install the required dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
 
-5. **Run the Application**
-   Start the development server:
+5. **Installing Frontend**
+   Ensure you are in the `frontend` directory and then run the following command:
+
+   ```bash
+   npm i
+   ```
+
+6. **Build the App**
+   Ensure that you are in the root directory and then run the `buildapp.sh`
+
+   ```bash
+   chmod +x buildapp.sh
+   ./buildapp.sh
+   ```
+
+7. **Run the Application**
+   If all the above steps worked without errors, start the development server:
+
    ```bash
    python manage.py runserver
    ```
+
    The app should now be accessible at `http://127.0.0.1:8000`.
 
 ---
