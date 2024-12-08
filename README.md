@@ -13,7 +13,7 @@ This is a basic utility app designed for students at the National Institute of S
 ### Prerequisites
 - Python 3.9+ 
 - Git
-- Virtual Environment (`venv`)
+- nodejs v21.5.0+
 
 ### Installation
 
@@ -28,10 +28,24 @@ This is a basic utility app designed for students at the National Institute of S
    ```
 
 3. **Set Up a Virtual Environment**
+   To create a virtual environment, run
+
    ```bash
    python -m venv .venv
+   ```
+
+   Run the following command to enter the virtual environment
+
+   ```bash
    source .venv/bin/activate
    ```
+
+   If you are using a windows system, use this instead:
+
+   ```plaintext
+   .\.venv\Scripts\activate
+   ```
+
 
 4. **Install Dependencies**
    Ensure you are in the `backend` directory and then install the required dependencies:

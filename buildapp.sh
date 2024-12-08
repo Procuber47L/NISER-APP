@@ -1,25 +1,23 @@
 #!/bin/bash
 
-# Activate the virtual environment
-source ./backend/.venv/bin/activate
+if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" || "$OSTYPE" == "win32" ]]; then
 
-# Remove the existing static files directory
-rm -rf ./backend/static/*
+    ./backend/.venv/Scripts/activate.bat
+    rm -rf ./backend/static/*
+    cp -r ./assets/arc ./backend/static
+    cd frontend
+    npm run build
+    cd ../backend
+    python manage.py collectstatic --noinput
 
-# Copy assets to the static directory
-cp -r ./assets/arc ./backend/static
+else
+    source ./backend/.venv/bin/activate
+    rm -rf ./backend/static/*
+    cp -r ./assets/arc ./backend/static
+    cd frontend
+    npm run build
+    cd ../backend
+    python manage.py collectstatic --noinput
+fi
 
-# Navigate to the frontend directory
-cd frontend
-
-# Build the frontend assets
-npm run build
-
-# Navigate back to the backend directory
-cd ../backend
-
-# Collect static files for the Django project
-python manage.py collectstatic --noinput
-
-# Print a completion message
 echo "Build process completed"
