@@ -24,7 +24,9 @@ const Home: React.FC = () => {
   return (
     <Box>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar sx={{
+          textAlign:"center"
+        }}>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             NISER SDG Projects
           </Typography>
