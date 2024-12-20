@@ -1,6 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
+<<<<<<< Updated upstream
 import { Card, CardContent, Typography, Grid, Box, AppBar, Toolbar } from "@mui/material";
+=======
+import { Card, CardContent, Typography, Box, CssBaseline } from "@mui/material";
+import LoginPage from "./components/LoginPage";
+
+const themeColors = {
+  yellow: "#F7941D",
+  yellowTr: "#FABD73",
+  dark: "#414a4d",
+  text: "#89807A",
+  backgroundDark: "#080618",
+  textDark: "#ccc",
+};
+>>>>>>> Stashed changes
+
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -74,6 +89,7 @@ const App: React.FC = () => {
         <Route path="/archive" element={<Archive />} />
         <Route path="/lnf" element={<LostAndFound />} />
         <Route path="/listings" element={<Listings />} />
+        <Route path="/user_login" element={<LoginPage />} />
       </Routes>
     </Router>
   );
