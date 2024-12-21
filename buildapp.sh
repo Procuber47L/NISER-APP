@@ -4,7 +4,7 @@ if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" || "$OSTYPE" == "win32" ]]; t
 
     ./backend/.venv/Scripts/activate.bat
     rm -rf ./backend/static/*
-    cp -r ./assets/arc ./backend/static
+    cp -r ./assets/* ./backend/static
     cd frontend
     npm run build
     cd ../backend

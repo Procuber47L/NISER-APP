@@ -20,5 +20,14 @@ from .views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< Updated upstream
     path('',index),
+=======
+    path('', index),
+    path('archive', index),
+    path('lnf', index),
+    path('listings', index),
+    path('listings/', include((listings_urls, 'listings'), namespace='listings')),
+    path('user_login', index),
+>>>>>>> Stashed changes
 ]
