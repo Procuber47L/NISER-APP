@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import { Card, CardContent, Typography, Grid, Box, AppBar, Toolbar } from "@mui/material";
+import LoginPage from "./components/LoginPage";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -74,6 +75,7 @@ const App: React.FC = () => {
         <Route path="/archive" element={<Archive />} />
         <Route path="/lnf" element={<LostAndFound />} />
         <Route path="/listings" element={<Listings />} />
+        <Route path="/user_login" element={<LoginPage />} />
       </Routes>
     </Router>
   );

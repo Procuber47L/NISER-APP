@@ -20,5 +20,10 @@ from .views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index),
+    path('', index),
+    path('archive', index),
+    path('lnf', index),
+    path('listings', index),
+    path('listings/', index),
+    path('user_login', index),
 ]
